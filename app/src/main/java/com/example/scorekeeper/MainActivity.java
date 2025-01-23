@@ -68,14 +68,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.night_mode) {
-            // Alternar modo noche/día
             int nightMode = AppCompatDelegate.getDefaultNightMode();
             if (nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             }
-            recreate(); // Recargar la actividad para aplicar cambios
+            recreate();
             return true;
         }
         return super.onOptionsItemSelected(item);
